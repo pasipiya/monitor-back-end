@@ -2,23 +2,26 @@ package com.software.controller;
 
 
 import com.software.model.Sensor;
-import com.software.repository.DataAcquisitionRepository;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import com.software.service.SensorService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class DataAcquisition {
-    private final DataAcquisitionRepository repository;
+    private final SensorService sensorService;
 
-    public DataAcquisition(DataAcquisitionRepository repository) {
-        this.repository = repository;
+    public DataAcquisition(SensorService sensorService) {
+        this.sensorService = sensorService;
     }
 
     @PostMapping("/sensor-data")
     Sensor newSensor (@RequestBody Sensor newSensor){
-        return repository.save(newSensor);
+        return sensorService.create(newSensor);
     }
 
-
+    @GetMapping("/sensor-data/{sensorId}/{userId}")
+    List<Sensor> getSensorData (@PathVariable String sensorId, @PathVariable String userId){
+        return (List<Sensor>) sensorService.getSensorData(sensorId,userId);
+    }
 }
