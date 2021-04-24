@@ -68,7 +68,4 @@ public class Sensor {
         this.dataValue = dataValue;
     }
 
-
-
-
 }
