@@ -1,13 +1,13 @@
-package com.example.consumingrest;
+package com.software;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ConsumingRestApplication {
+public class MonitorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConsumingRestApplication.class, args);
+		SpringApplication.run(MonitorApplication.class, args);
 	}
 
 }
