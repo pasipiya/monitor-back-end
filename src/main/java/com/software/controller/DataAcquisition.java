@@ -15,11 +15,13 @@ public class DataAcquisition {
         this.sensorService = sensorService;
     }
 
+    @CrossOrigin
     @PostMapping("/sensor-data")
     Sensor newSensor (@RequestBody Sensor newSensor){
         return sensorService.create(newSensor);
     }
 
+    @CrossOrigin
     @GetMapping("/sensor-data/{sensorId}/{userId}")
     List<Sensor> getSensorData (@PathVariable String sensorId, @PathVariable String userId){
         return (List<Sensor>) sensorService.getSensorData(sensorId,userId);
