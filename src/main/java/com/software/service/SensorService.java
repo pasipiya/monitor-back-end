@@ -17,7 +17,10 @@ public class SensorService {
     public Sensor create(Sensor sensor){
         Sensor savedSensor= dataAcquisitionRepository.save(sensor);
         TemperatureLogic temperatureLogic = new TemperatureLogic();
-        temperatureLogic.checkValue(sensor.getDataValue());
+        boolean isAlert = temperatureLogic.checkValue(sensor.getDataValue());
+        if(isAlert){
+
+        }
         return savedSensor;
     }
 
