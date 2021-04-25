@@ -60,7 +60,7 @@ public class Sensor {
         this.date = date;
     }
 
-    public String getDataValue() {
+    public int getDataValue() {
         return dataValue;
     }
 

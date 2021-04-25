@@ -1,6 +1,7 @@
 package com.software.service;
 
 
+import com.software.logic.TemperatureLogic;
 import com.software.model.Sensor;
 import com.software.repository.DataAcquisitionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,8 @@ public class SensorService {
     private DataAcquisitionRepository dataAcquisitionRepository;
     public Sensor create(Sensor sensor){
         Sensor savedSensor= dataAcquisitionRepository.save(sensor);
+        TemperatureLogic temperatureLogic = new TemperatureLogic();
+        temperatureLogic.checkValue(sensor.getDataValue());
         return savedSensor;
     }
 
@@ -29,4 +32,7 @@ public class SensorService {
     public String test(){
         return "Great";
     }
+
+
+
 }
