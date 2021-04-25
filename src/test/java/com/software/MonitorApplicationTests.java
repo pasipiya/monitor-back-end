@@ -1,10 +1,10 @@
-package com.example.consumingrest;
+package com.software;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConsumingRestApplicationTests {
+class MonitorApplicationTests {
 
 	@Test
 	void contextLoads() {
