@@ -25,4 +25,8 @@ public class SensorService {
     public  Sensor getOneSensorData(Long id){
         return dataAcquisitionRepository.getOne(id);
     }
+
+    public String test(){
+        return "Great";
+    }
 }

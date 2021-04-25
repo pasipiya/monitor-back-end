@@ -24,4 +24,10 @@ public class DataAcquisition {
     List<Sensor> getSensorData (@PathVariable String sensorId, @PathVariable String userId){
         return (List<Sensor>) sensorService.getSensorData(sensorId,userId);
     }
+
+    @CrossOrigin
+    @GetMapping("/test")
+    String test(){
+        return sensorService.test();
+    }
 }
