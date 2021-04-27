@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9481e514-fe32-4e27-9975-bbdc3d95656b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/software/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/software/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/model/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/model/Sensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/notification/callNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/notification/CallNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/notification/emailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/notification/EmailNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/notification/smsNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/notification/SmsNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/repository/SensorRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/service/SensorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/service/SensorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/consumingrest/ConsumingRestApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/consumingrest/controller/LoginRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/consumingrest/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/consumingrest/repository/SensorRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/consumingrest/ConsumingRestApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619370554513</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement alert generation system">
+      <created>1619377477236</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619377477236</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +127,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="generate alerts" />
-    <option name="LAST_COMMIT_MESSAGE" value="generate alerts" />
+    <MESSAGE value="Implement alert generation system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement alert generation system" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
