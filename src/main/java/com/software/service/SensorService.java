@@ -27,6 +27,8 @@ public class SensorService {
 
     @Autowired
     private DataAcquisitionRepository dataAcquisitionRepository;
+
+
     public Sensor create(Sensor sensor){
         Sensor savedSensor= dataAcquisitionRepository.save(sensor);
         TemperatureLogic temperatureLogic = new TemperatureLogic();
@@ -34,18 +36,23 @@ public class SensorService {
         if(isAlert){
             List<User> users = userRepository.findAll();
 
+
             for( User user : users ){
-                if( user.getNotificationWay().equals("email")) {
-                    new EmailNotification().SendEmail( user );
-                }
 
-                if( user.getNotificationWay().equals("call")) {
-                    new CallNotification().SendCall(  user );
-                }
-
-                if( user.getNotificationWay().equals("sms")) {
-                    new SmsNotification().SendSms(  user );
-                }
+                NotificationFactory notificationFactory = new NotificationFactory();
+                Notification notification = notificationFactory.createNotification(user.getNotificationWay());
+                notification.notifyUser();
+//                if( user.getNotificationWay().equals("email")) {
+//                    new EmailNotification().SendEmail( user );
+//                }
+//
+//                if( user.getNotificationWay().equals("call")) {
+//                    new CallNotification().SendCall(  user );
+//                }
+//
+//                if( user.getNotificationWay().equals("sms")) {
+//                    new SmsNotification().SendSms(  user );
+//                }
             }
 
             Alert alert = new Alert();
